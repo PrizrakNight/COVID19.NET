@@ -1,2 +1,5 @@
-# COVID19.NET
- 
+```csharp
+if (isAwesome){
+  return true
+}
+```
