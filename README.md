@@ -1,6 +1,6 @@
 # COVID19.NET Library
 
-![COVID19Image](https://2hfybu1lrdue3x9wnu1dvw7s-wpengine.netdna-ssl.com/wp-content/uploads/2020/03/covid-19-image.png)
+![COVID19Image](https://novostivoronezha.ru/wp-content/uploads/2020/04/2020-04-04_12-19-14600-598x353.jpg)
 
 With this simple library, you can easily and simply receive information from the website [Coronavirus Data API](https://thevirustracker.com/)
 
