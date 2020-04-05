@@ -43,9 +43,13 @@ namespace COVID19.NET
 
         /// <summary>Return all of the current accumulated stats from Coronavirus Tracker for a specified Country</summary>
         /// <param name="countryCode">Code of the country</param>
-        public static Task<SpecificCountryInfo> GetCountryInfoAsync(CountryCode countryCode) => Task.Factory.StartNew(() =>
+        public static Task<SpecificCountryInfo> GetCountryInfoAsync(CountryCode countryCode) => GetCountryInfoAsync(countryCode.ToString());
+
+        /// <summary>Return all of the current accumulated stats from Coronavirus Tracker for a specified Country</summary>
+        /// <param name="countryCode">Code of the country</param>
+        public static Task<SpecificCountryInfo> GetCountryInfoAsync(string countryCode) => Task.Factory.StartNew(() =>
         {
-            using (JsonDocument jsonDocument = JsonDocument.Parse(WebRequestUtils.GetJson($"{APISource}?countryTotal={countryCode.ToString()}")))
+            using (JsonDocument jsonDocument = JsonDocument.Parse(WebRequestUtils.GetJson($"{APISource}?countryTotal={countryCode}")))
             {
                 foreach (JsonElement element in jsonDocument.RootElement.GetProperty("countrydata").EnumerateArray())
                     return JsonSerializer.Deserialize<SpecificCountryInfo>(element.ToString());
@@ -68,11 +72,16 @@ namespace COVID19.NET
 
         /// <summary>Return all TimeLine of the data for a specific Country from Coronavirus Tracker.</summary>
         /// <param name="countryCode">Code of the country</param>
-        public static Task<ReadOnlyCollection<SpecificCountryTimeLineInfo>> GetCountryTimeLineAsync(CountryCode countryCode) => Task.Factory.StartNew(() =>
+        public static Task<ReadOnlyCollection<SpecificCountryTimeLineInfo>> GetCountryTimeLineAsync(CountryCode countryCode) =>
+            GetCountryTimeLineAsync(countryCode.ToString());
+
+        /// <summary>Return all TimeLine of the data for a specific Country from Coronavirus Tracker.</summary>
+        /// <param name="countryCode">Code of the country</param>
+        public static Task<ReadOnlyCollection<SpecificCountryTimeLineInfo>> GetCountryTimeLineAsync(string countryCode) => Task.Factory.StartNew(() =>
         {
             List<SpecificCountryTimeLineInfo> timeLineInfos = new List<SpecificCountryTimeLineInfo>();
 
-            using (JsonDocument jsonDocument = JsonDocument.Parse(WebRequestUtils.GetJson($"{APISource}?countryTimeline={countryCode.ToString()}")))
+            using (JsonDocument jsonDocument = JsonDocument.Parse(WebRequestUtils.GetJson($"{APISource}?countryTimeline={countryCode}")))
             {
                 var infoJson = jsonDocument.RootElement
                 .GetProperty("countrytimelinedata")

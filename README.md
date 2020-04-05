@@ -16,10 +16,11 @@ This method will return data from all countries.
 var infos = await TheVirusTrackerClient.GetAllCountriesInfoAsync();
 ```
 
-This method returns all the data of a specific country by its code.
+This methods returns all the data of a specific country by its code.
 
 ```csharp
 var info = await TheVirusTrackerClient.GetCountryInfoAsync(CountryCode.RU);
+var infoFromString = await TheVirusTrackerClient.GetCountryInfoAsync("RU");
 ```
 
 This method returns global data from around the world.
@@ -34,8 +35,9 @@ This method returns all time lines of all countries.
 var timeLines = await TheVirusTrackerClient.GetFullTimeLineInfosAsync();
 ```
 
-This method returns the entire timeline of a specific country by its code.
+This methods returns the entire timeline of a specific country by its code.
 
 ```csharp
 var timeLine = await TheVirusTrackerClient.GetCountryTimeLineAsync(CountryCode.RU);
+var timeLineFromString = await TheVirusTrackerClient.GetCountryTimeLineAsync("RU");
 ```

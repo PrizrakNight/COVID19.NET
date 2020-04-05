@@ -18,5 +18,7 @@ namespace COVID19.NET
         public long SeriousCases { get; set; }
         [JsonPropertyName("total_new_cases_today")]
         public long NewCasesToday { get; set; }
+        [JsonPropertyName("total_new_deaths_today")]
+        public long NewDeathsToday { get; set; }
     }
 }
