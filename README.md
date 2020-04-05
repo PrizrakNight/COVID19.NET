@@ -10,7 +10,7 @@ I hope this library will help you in your research, good luck to everyone, thank
 
 ### Examples of using
 
-This method returns all data from [WebAPI](https://api.thevirustracker.com/free-api?countryTotals=ALL)
+This method will return data from all countries.
 
 ```csharp
 var infos = await TheVirusTrackerClient.GetAllCountriesInfoAsync();
@@ -31,7 +31,7 @@ var globalInfo = await TheVirusTrackerClient.GetGlobalInfoAsync();
 This method returns all time lines of all countries.
 
 ```csharp
-var timeLines = await TheVirusTrackerClient.GetFullTimeLineInfos();
+var timeLines = await TheVirusTrackerClient.GetFullTimeLineInfosAsync();
 ```
 
 This method returns the entire timeline of a specific country by its code.
