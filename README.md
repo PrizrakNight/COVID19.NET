@@ -13,3 +13,9 @@ This method returns all data from [WebAPI](https://api.thevirustracker.com/free-
 ```csharp
 var infos = await TheVirusTrackerClient.GetAllCountriesInfoAsync();
 ```
+
+This method returns all the data of a specific country by its code.
+
+```csharp
+var infos = await TheVirusTrackerClient.GetCountryInfoAsync(CountryCode.RU);
+```
