@@ -102,7 +102,7 @@ namespace COVID19.NET
         });
 
         /// <summary>Return all of the timeline data from the Coronavirus Tracker.</summary>
-        public static Task<ReadOnlyCollection<CountryTimeLineInfo>> GetFullTimeLineInfos() => Task.Factory.StartNew(() =>
+        public static Task<ReadOnlyCollection<CountryTimeLineInfo>> GetFullTimeLineInfosAsync() => Task.Factory.StartNew(() =>
         {
             List<CountryTimeLineInfo> timeLineInfos;
 
