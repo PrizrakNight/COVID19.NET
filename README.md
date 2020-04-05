@@ -6,6 +6,8 @@ With this simple library, you can easily and simply receive information from the
 
 **Take care of yourself and your loved ones, do not get sick and follow safety measures so as not to get infected. May force come with us in these difficult times!**
 
+I hope this library will help you in your research, good luck to everyone, thank you for deciding to try this tool!
+
 ### Examples of using
 
 This method returns all data from [WebAPI](https://api.thevirustracker.com/free-api?countryTotals=ALL)
