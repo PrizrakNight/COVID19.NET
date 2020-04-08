@@ -41,3 +41,9 @@ These methods returns the entire timeline of a specific country by its code.
 var timeLine = await TheVirusTrackerClient.GetCountryTimeLineAsync(CountryCode.RU);
 var timeLineFromString = await TheVirusTrackerClient.GetCountryTimeLineAsync("RU");
 ```
+### Exceptions
+
+`DataNotFoundException` - As a rule, this exception is thrown if the country code was entered incorrectly.
+`NoDataException` - This exception is thrown if the site returned empty data.
+This may be the case when the site is on technical servicing, or for some reason has stopped returning the necessary data.
+In this case, it is better to visit the [site](https://thevirustracker.com/api) itself and find out the reason for the lack of data.
