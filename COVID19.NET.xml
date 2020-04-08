@@ -557,6 +557,10 @@
             <summary>Return all of the current accumulated stats from Coronavirus Tracker for a specified Country</summary>
             <param name="countryCode">Code of the country</param>
         </member>
+        <member name="M:COVID19.NET.TheVirusTrackerClient.GetCountryInfoAsync(System.String)">
+            <summary>Return all of the current accumulated stats from Coronavirus Tracker for a specified Country</summary>
+            <param name="countryCode">Code of the country</param>
+        </member>
         <member name="M:COVID19.NET.TheVirusTrackerClient.GetGlobalInfoAsync">
             <summary>receive all of the current globally accumulated stats from Coronavirus Tracker.</summary>
         </member>
@@ -564,7 +568,11 @@
             <summary>Return all TimeLine of the data for a specific Country from Coronavirus Tracker.</summary>
             <param name="countryCode">Code of the country</param>
         </member>
-        <member name="M:COVID19.NET.TheVirusTrackerClient.GetFullTimeLineInfos">
+        <member name="M:COVID19.NET.TheVirusTrackerClient.GetCountryTimeLineAsync(System.String)">
+            <summary>Return all TimeLine of the data for a specific Country from Coronavirus Tracker.</summary>
+            <param name="countryCode">Code of the country</param>
+        </member>
+        <member name="M:COVID19.NET.TheVirusTrackerClient.GetFullTimeLineInfosAsync">
             <summary>Return all of the timeline data from the Coronavirus Tracker.</summary>
         </member>
     </members>
