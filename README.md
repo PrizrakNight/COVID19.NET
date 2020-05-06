@@ -38,7 +38,7 @@ Features of this client:
 
 ### Examples of using
 
-#####An example of working with TheVirusTrackerClient
+####An example of working with TheVirusTrackerClient
 This method will return data from all countries.
 
 ```csharp
