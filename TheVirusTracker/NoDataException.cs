@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace COVID19.NET
+namespace COVID19.NET.TheVirusTracker
 {
     public class NoDataException : Exception
     {

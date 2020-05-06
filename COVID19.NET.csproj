@@ -20,4 +20,8 @@ Do not be sick, take care of yourself and your loved ones, observe safety precau
     <Service Include="{508349b6-6b84-4df5-91f0-309beebad82d}" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="TheVirusTracker\Converters\" />
+  </ItemGroup>
+
 </Project>

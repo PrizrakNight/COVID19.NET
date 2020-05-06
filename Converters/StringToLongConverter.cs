@@ -2,7 +2,7 @@
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
-namespace COVID19.NET
+namespace COVID19.NET.Converters
 {
     internal class StringToLongConverter : JsonConverter<long>
     {

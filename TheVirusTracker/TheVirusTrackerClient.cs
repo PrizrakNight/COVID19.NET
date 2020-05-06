@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text.Json;
 using System.Threading.Tasks;
 
-namespace COVID19.NET
+namespace COVID19.NET.TheVirusTracker
 {
     /// <summary>Provides easy access to site data "https://thevirustracker.com/api".</summary>
     public static class TheVirusTrackerClient
@@ -19,7 +19,7 @@ namespace COVID19.NET
         {
             List<SpecificCountryInfo> infos = new List<SpecificCountryInfo>();
 
-            using (JsonDocument jsonDocument = JsonDocument.Parse(WebRequestUtils.GetCountriesJson()))
+            using (JsonDocument jsonDocument = JsonDocument.Parse(TheVirusTrackerUtils.GetCountriesJson()))
             {
                 foreach (JsonProperty property in jsonDocument.RootElement
                 .GetProperty("countryitems")
@@ -54,7 +54,7 @@ namespace COVID19.NET
         /// <exception cref="DataNotFoundException">It is thrown out if the data was not found on the site or they are missing there</exception>
         public static Task<SpecificCountryInfo> GetCountryInfoAsync(string countryCode) => Task.Factory.StartNew(() =>
         {
-            using (JsonDocument jsonDocument = JsonDocument.Parse(WebRequestUtils.GetCountryJson(countryCode)))
+            using (JsonDocument jsonDocument = JsonDocument.Parse(TheVirusTrackerUtils.GetCountryJson(countryCode)))
             {
                 if (HasData(jsonDocument))
                 {
@@ -71,7 +71,7 @@ namespace COVID19.NET
         /// <exception cref="NoDataException">Thrown out if the site in response sent an empty string containing no data.</exception>
         public static Task<GlobalCOVID19Info> GetGlobalInfoAsync() => Task.Factory.StartNew(() =>
         {
-            using (JsonDocument jsonDocument = JsonDocument.Parse(WebRequestUtils.GetGlobalJson()))
+            using (JsonDocument jsonDocument = JsonDocument.Parse(TheVirusTrackerUtils.GetGlobalJson()))
             {
                 foreach (JsonElement element in jsonDocument.RootElement.GetProperty("results").EnumerateArray())
                     return JsonSerializer.Deserialize<GlobalCOVID19Info>(element.ToString());
@@ -95,7 +95,7 @@ namespace COVID19.NET
         {
             List<SpecificCountryTimeLineInfo> timeLineInfos = new List<SpecificCountryTimeLineInfo>();
 
-            using (JsonDocument jsonDocument = JsonDocument.Parse(WebRequestUtils.GetCountryTimeLineJson(countryCode)))
+            using (JsonDocument jsonDocument = JsonDocument.Parse(TheVirusTrackerUtils.GetCountryTimeLineJson(countryCode)))
             {
                 if (HasData(jsonDocument))
                 {
@@ -134,7 +134,7 @@ namespace COVID19.NET
         {
             List<CountryTimeLineInfo> timeLineInfos;
 
-            using (JsonDocument jsonDocument = JsonDocument.Parse(WebRequestUtils.GetTimeLines()))
+            using (JsonDocument jsonDocument = JsonDocument.Parse(TheVirusTrackerUtils.GetTimeLines()))
             {
                 string dataJson = jsonDocument.RootElement.GetProperty("data").ToString();
 

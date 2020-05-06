@@ -1,4 +1,4 @@
-﻿namespace COVID19.NET
+﻿namespace COVID19.NET.TheVirusTracker
 {
     /// <summary>Represents a country code.</summary>
     public enum CountryCode

@@ -1,6 +1,6 @@
 ﻿using System.Text.Json.Serialization;
 
-namespace COVID19.NET
+namespace COVID19.NET.TheVirusTracker
 {
     public class GlobalCOVID19Info : COVID19Info
     {
