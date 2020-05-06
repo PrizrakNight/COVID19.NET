@@ -31,7 +31,7 @@ Features of this client:
 Features of this client:
 
 1.  Brief information about country infections on the page of interest.
-2. There is a link to the image of the flag of the country.
+2. There is a link to the flag of the country.
 
 ------------
 
