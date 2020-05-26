@@ -26,7 +26,7 @@ Features of this client:
 	1. Global timeline.
 	2. Country-specific timeline.
 
-`COVID19.NET.CoronaVirusStats.CVSClient` - Provides easy access to WebAPI [corona-virus-stats.herokuapp.com](https://corona-virus-stats.herokuapp.com/api/v1/cases/countries-search "corona-virus-stats.herokuapp.com") data.
+![#f03c15][No longer available] `COVID19.NET.CoronaVirusStats.CVSClient` - Provides easy access to WebAPI [corona-virus-stats.herokuapp.com](https://corona-virus-stats.herokuapp.com/api/v1/cases/countries-search "corona-virus-stats.herokuapp.com") data.
 
 Features of this client:
 
