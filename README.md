@@ -28,8 +28,8 @@ Features of this client:
 
 ```diff
 - [No longer available]
-```
 `COVID19.NET.CoronaVirusStats.CVSClient` - Provides easy access to WebAPI [corona-virus-stats.herokuapp.com](https://corona-virus-stats.herokuapp.com/api/v1/cases/countries-search "corona-virus-stats.herokuapp.com") data.
+```
 
 Features of this client:
 
