@@ -13,7 +13,7 @@ Do not be sick, take care of yourself and your loved ones, observe safety precau
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="System.Text.Json" Version="4.7.1" />
+    <PackageReference Include="System.Text.Json" Version="8.0.4" />
   </ItemGroup>
 
   <ItemGroup>
